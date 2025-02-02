@@ -153,6 +153,6 @@ void Setup_Board(int seed) {
         for (int x = 0; x < 16; ++x) {
             arr_buttons[x][y].chr = &chr_buttons[arr_buttons[x][y].type];
         }
-    } 
+    }
 
 }

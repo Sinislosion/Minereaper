@@ -2,6 +2,7 @@
 #include "game.h"
 #include "mouse.h"
 #include "buttons.h"
+#include "music.h"
 #include "util.h"
 #include "smiley.h"
 
@@ -114,7 +115,7 @@ void Game_Running(void) {
             }
         }
         Raquet_PlaySound(snd_win, 0, 0);
-        Raquet_StopChannel(2);
+        Music_Stop();
         CUR_GAME_STATE = YOU_WIN;
     }
 

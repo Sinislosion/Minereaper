@@ -3,10 +3,10 @@
 #include "buttons.h"
 #include "mouse.h"
 #include "smiley.h"
+#include "music.h"
 #include <time.h>
 
 Raquet_Sound snd_win;
-Raquet_Sound mus_chip01;
 
 int Get_Random(int seed, int a, int c, int m) {
     return (a*seed+c) % m;
@@ -15,7 +15,6 @@ int Get_Random(int seed, int a, int c, int m) {
 void createthedog() {
 
     snd_win = Raquet_LoadSound(Raquet_AbsoluteToAsset("snd_win.wav"));
-    mus_chip01 = Raquet_LoadSound(Raquet_AbsoluteToAsset("mus_chip01.wav"));
 
     Raquet_SetPalette(pal_button, Raquet_GlobalPalette[0x12], Raquet_GlobalPalette[0x0D], Raquet_GlobalPalette[0x10], Raquet_GlobalPalette[0x30]);
     Raquet_SetPalette(pal_button_pressed, Raquet_GlobalPalette[0x12], Raquet_GlobalPalette[0x0D], Raquet_GlobalPalette[0x00], Raquet_GlobalPalette[0x10]);
@@ -59,7 +58,8 @@ void createthedog() {
 
     Raquet_ShowCursor(0);
 
-    Raquet_PlaySound(mus_chip01, -1, 2);
+    Music_Init();
+    Music_Play();
 
 }
 
