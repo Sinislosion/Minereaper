@@ -266,6 +266,7 @@ void Raquet_SwapCHRPalette(Raquet_CHR* chr, Palette pal[4]) {
         }
     }
     SDL_UpdateTexture(chr->tex, NULL, pixels, chr->width * sizeof(Palette));
+    free(pixels);
 
 }
 

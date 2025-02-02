@@ -8,5 +8,6 @@ void Draw_Text(char* str, int x, int y, Palette pal[4]) {
         Raquet_CHR chr = Raquet_LoadCHR(ppf_main, *i, pal);
         Raquet_PlaceCHR(chr, x + (o * 8), y);
         ++o;
+        SDL_DestroyTexture(chr.tex);
     }
 }

@@ -22,12 +22,14 @@ Raquet_Sound Raquet_LoadSound(const char * file);
  * @param wav The Raquet_Sound to play
  * @param loops Whether or not to loop the sound (1 = true, 0 = false)
  */
-extern void Raquet_PlaySound(Raquet_Sound wav, int loops);
+extern void Raquet_PlaySound(Raquet_Sound wav, int loops, int channel);
 
 /**
  * @brief Frees the memory used by a Raquet_Sound variable
  * @param wav The Raquet_Sound to destroy
  */
 extern void Raquet_DestroySound(Raquet_Sound wav);
+
+extern void Raquet_StopChannel(int channel);
 
 #endif

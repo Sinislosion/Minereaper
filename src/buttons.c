@@ -94,6 +94,12 @@ void Draw_Button(int x, int y) {
         } else {
             Raquet_PlaceCHR(*arr_buttons[x][y].chr, finx, finy);
         }
+
+        if (arr_buttons[x][y].type == 9 && CUR_GAME_STATE == YOU_WIN) {
+            Raquet_PlaceCHR(chr_buttons[8], finx, finy);
+            return;
+        }
+
     } else if (arr_buttons[x][y].isBeingPressed) {
         Raquet_SwapCHRPalette(&chr_buttons[10], pal_button_pressed);
         Raquet_PlaceCHR(chr_buttons[10], finx, finy);
@@ -147,6 +153,6 @@ void Setup_Board(int seed) {
         for (int x = 0; x < 16; ++x) {
             arr_buttons[x][y].chr = &chr_buttons[arr_buttons[x][y].type];
         }
-    }
+    } 
 
 }

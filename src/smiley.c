@@ -112,6 +112,8 @@ void Smiley_Main(void) {
                 firstClick = 1;
                 Setup_Board(rand());
                 CUR_GAME_STATE = RUNNING;
+                Raquet_StopChannel(2);
+                Raquet_PlaySound(mus_chip01, -1, 2);
             }
 
             if (CUR_GAME_STATE == GAME_OVER) {
@@ -127,6 +129,7 @@ void Smiley_Main(void) {
                 Setup_Board(rand());
                 CUR_SMILEY_STATE = SMILEY_STUNNED;
                 CUR_GAME_STATE = RUNNING;
+                Raquet_PlaySound(mus_chip01, -1, 2);
             }
             break;
 
@@ -165,6 +168,7 @@ void Smiley_Main(void) {
                     Setup_Board(rand());
                     CUR_SMILEY_STATE = SMILEY_STUNNED;
                     CUR_GAME_STATE = RUNNING;
+                    Raquet_PlaySound(mus_chip01, -1, 2);
                 }
             }
             Raquet_PlaceCHR(chr_smiley_win[smileyWinFrame], SMILEY_X, SMILEY_Y);

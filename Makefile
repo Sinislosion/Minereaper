@@ -1,6 +1,6 @@
 # Modify these if you need
 COMPILER := gcc
-CFLAGS := --std=c99 -Wall -Wextra -O3  # Change CFLAGS to C++ flags
+CFLAGS := --std=c99 -Wall -Wextra -O2  # Change CFLAGS to C++ flags
 
 # Name of the final executable
 TARGET := Minereaper

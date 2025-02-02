@@ -10,6 +10,9 @@
 #define NUM_ROWS            14
 #define NUM_COLUMNS         16
 
+extern Raquet_Sound snd_win;
+extern Raquet_Sound mus_chip01;
+
 typedef enum GAME_STATE {
     TITLE,
     RUNNING,

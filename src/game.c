@@ -24,7 +24,6 @@ void Game_GameOver(void) {
 
     Draw_Text("GAME OVER", (SCREEN_WIDTH / 2 - 36), (SCREEN_HEIGHT / 2) - 4, pal_text_gameover);
 
-
     Smiley_Main();
     Mouse_Draw();
 }
@@ -39,7 +38,6 @@ void Game_YouWin(void) {
     }
 
     Draw_Text("YOU WIN", (SCREEN_WIDTH / 2 - 28), (SCREEN_HEIGHT / 2) - 4, pal_text_gameover);
-
 
     Smiley_Main();
     Mouse_Draw();
@@ -76,12 +74,13 @@ void Game_Running(void) {
                     if (firstClick > 0 && arr_buttons[x][y].type == 9) {
                         while (arr_buttons[x][y].type == 9) {
                             Setup_Board(rand());
-                            firstClick = 0;
                         }
+                        firstClick = 0;
                     }
                     if (arr_buttons[x][y].type == 10) {
                         Fill_Empty(x, y);
                     } else if (arr_buttons[x][y].type == 9) {
+                        Raquet_StopChannel(2);
                         CUR_GAME_STATE = GAME_OVER;
                     }
                     firstClick = 0;
@@ -114,6 +113,8 @@ void Game_Running(void) {
                 arr_buttons[x][y].isPressed = 1;
             }
         }
+        Raquet_PlaySound(snd_win, 0, 0);
+        Raquet_StopChannel(2);
         CUR_GAME_STATE = YOU_WIN;
     }
 
