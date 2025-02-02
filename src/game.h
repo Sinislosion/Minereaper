@@ -13,6 +13,7 @@
 typedef enum GAME_STATE {
     TITLE,
     RUNNING,
+    YOU_WIN,
     GAME_OVER
 } GAME_STATE;
 
@@ -20,11 +21,12 @@ extern GAME_STATE CUR_GAME_STATE;
 
 extern PPF_Bank ppf_main;
 
-extern uint8_t firstClick;
+extern int firstClick;
 
 extern Palette pal_text_gameover[4];
 
 extern void Game_GameOver(void);
 extern void Game_Running(void);
+extern void Game_YouWin(void);
 
 #endif

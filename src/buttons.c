@@ -106,7 +106,6 @@ void Draw_Button(int x, int y) {
 }
 
 void Setup_Board(int seed) {
-    firstClick = 1;
 
     for (int y = 0; y < 14; ++y) {
         for (int x = 0; x < 16; ++x) {

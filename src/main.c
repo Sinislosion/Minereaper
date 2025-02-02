@@ -55,12 +55,18 @@ void createthedog() {
 }
 
 void runthedog() {
+    if (Raquet_KeyCheck(SDL_SCANCODE_Z)) {
+        CUR_GAME_STATE = YOU_WIN;
+    }
     switch (CUR_GAME_STATE) {
         case RUNNING:
             Game_Running();
             break;
         case GAME_OVER:
             Game_GameOver();
+            break;
+        case YOU_WIN:
+            Game_YouWin();
             break;
     }
 }
