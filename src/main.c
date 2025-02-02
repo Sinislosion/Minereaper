@@ -35,15 +35,22 @@ void createthedog() {
         {36, 37, 52, 53}  // NONE
     };
     chr_buttons[0] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[0], 2, 2, pal_button);
-    chr_buttons[1] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[1], 2, 2, pal_button);
-    chr_buttons[2] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[2], 2, 2, pal_button);
-    chr_buttons[3] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[3], 2, 2, pal_button);
-    chr_buttons[4] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[4], 2, 2, pal_button);
-    chr_buttons[5] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[5], 2, 2, pal_button);
-    chr_buttons[6] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[6], 2, 2, pal_button);
-    chr_buttons[7] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[7], 2, 2, pal_button);
-    chr_buttons[8] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[8], 2, 2, pal_button);
-    chr_buttons[9] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[9], 2, 2, pal_button);
+    Palette pal_button_2[4] = {Raquet_GlobalPalette[0x15], Raquet_GlobalPalette[0x0D], Raquet_GlobalPalette[0x10], Raquet_GlobalPalette[0x30]};
+    Palette pal_button_3[4] = {Raquet_GlobalPalette[0x19], Raquet_GlobalPalette[0x0D], Raquet_GlobalPalette[0x10], Raquet_GlobalPalette[0x30]};
+    Palette pal_button_4[4] = {Raquet_GlobalPalette[0x17], Raquet_GlobalPalette[0x0D], Raquet_GlobalPalette[0x10], Raquet_GlobalPalette[0x30]};
+    Palette pal_button_5[4] = {Raquet_GlobalPalette[0x14], Raquet_GlobalPalette[0x0D], Raquet_GlobalPalette[0x10], Raquet_GlobalPalette[0x30]};
+    Palette pal_button_6[4] = {Raquet_GlobalPalette[0x1C], Raquet_GlobalPalette[0x0D], Raquet_GlobalPalette[0x10], Raquet_GlobalPalette[0x30]};
+    Palette pal_button_7[4] = {Raquet_GlobalPalette[0x01], Raquet_GlobalPalette[0x0D], Raquet_GlobalPalette[0x10], Raquet_GlobalPalette[0x30]};
+    Palette pal_button_8[4] = {Raquet_GlobalPalette[0x0D], Raquet_GlobalPalette[0x0D], Raquet_GlobalPalette[0x10], Raquet_GlobalPalette[0x30]};
+    chr_buttons[1] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[1], 2, 2, pal_button_2);
+    chr_buttons[2] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[2], 2, 2, pal_button_3);
+    chr_buttons[3] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[3], 2, 2, pal_button_4);
+    chr_buttons[4] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[4], 2, 2, pal_button_5);
+    chr_buttons[5] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[5], 2, 2, pal_button_6);
+    chr_buttons[6] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[6], 2, 2, pal_button_7);
+    chr_buttons[7] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[7], 2, 2, pal_button_8);
+    chr_buttons[8] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[8], 2, 2, pal_button_2);
+    chr_buttons[9] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[9], 2, 2, pal_button_8);
     chr_buttons[10] = Raquet_LoadCHRMult(ppf_main, arr_buttonsprites[10], 2, 2, pal_button);
 
     srand(time(NULL));
